@@ -35,7 +35,7 @@ Go ahead and migrate to create them:
 rake db:migrate
 ```
 
-Test your xml and adding your LTI. Rails does a lot of black magic!
+Test your xml and test adding your LTI. Rails does a lot of black magic!
 
 # Install LTI
 - Have the XML, consumer key, and secret ready.
