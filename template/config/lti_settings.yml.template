@@ -1,0 +1,9 @@
+production:
+  url: http://127.0.0.1:8080
+  namespace: my_app_production
+
+development:
+  launch_url: http://localhost:3000/launch/index
+  namespace: lti_example
+  consumer_key: consumer_key
+  consumer_secret: consumer_secret

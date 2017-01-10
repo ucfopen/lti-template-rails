@@ -1,0 +1,11 @@
+// Place all the styles related to the Launch controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack:    Arial, sans-serif;
+$primary-color: #444;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
