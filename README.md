@@ -8,6 +8,9 @@ gem install rails
 
 - Create lti_settings.yml from the template lti_settings.yml.template
     - It's located in the config folder
+- Also create secrets.yml from the secrets.yml.template file
+    - In the config folder as well
+    - You can use 'rails secret' to generate a key
 
 The server can be run by navigating to the root of the project and running:
 ```
