@@ -8,7 +8,9 @@ Thanks for being interested! Here's our guidelines to contributing to the templa
 
 ## Getting Your Hands Dirty
 - Fork the repository.
-- Please try not to work on master. Instead, create a new branch named after your issue- `git checkout -b issue/brief-issue-description`.
+- Please try not to work on master. Instead, create a new branch named after your issue and its number:
+
+    - `git checkout -b issue/number-brief-issue-description`
 
 ## Submit!
 - Push your changes.
