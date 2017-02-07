@@ -25,7 +25,7 @@ rake db:create
 
 To generate tables for your db:
 ```
-rails generate scaffold Test user:string user_id:int
+rails generate scaffold Test user:string user_id:integer
 ```
 This will create a model and a migration file that will create a db table that
 corresponds to it, a controller, and a few views.
