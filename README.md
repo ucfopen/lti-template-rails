@@ -17,7 +17,7 @@ The server can be run by navigating to the root of the project and running:
 bin/rails server
 ```
 
-Here's the commadn to create a DB, if you need it. Rails does a lot of magic,
+Here's the command to create a DB, if you need it. Rails does a lot of magic,
 so it will generate files that it needs.
 ```
 rake db:create
