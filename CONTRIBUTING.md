@@ -15,3 +15,6 @@ Thanks for being interested! Here's our guidelines to contributing to the templa
 ## Submit!
 - Push your changes.
 - Submit a pull request.
+- We will review your changes and try to respond in a timely manner.
+
+That's it!
