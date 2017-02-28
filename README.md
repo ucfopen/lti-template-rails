@@ -1,47 +1,28 @@
 [![Join UCF Open Slack Discussions](https://ucf-open-slackin.herokuapp.com/badge.svg)](https://ucf-open-slackin.herokuapp.com/)
 
-# Ruby
-## Rails
+# LTI Template For Ruby on Rails
 
-Make sure you have Rails:
-```
-gem install rails
-```
+## Setup
 
-- Create lti_settings.yml from the template lti_settings.yml.template
-    - It's located in the config folder
-- Also create secrets.yml from the secrets.yml.template file
-    - In the config folder as well
-    - You can use 'rails secret' to generate a key
+1. Make sure [Ruby is installed](https://www.ruby-lang.org/en/documentation/installation/) `ruby --version`
+2. Install Bundler with `gem install bundler`
+3. Change directory into the Rails app's root directory `cd template`.
+4. Install all the gems listed in the Gemfile using the simple command: `bundle`
+5. Create `template/config/lti_settings.yml` by copying the template `template/config/lti_settings.yml.template`
+6. Create `template/config/secrets.yml` by copying the template `template/config/secrets.yml.template`.
 
-The server can be run by navigating to the root of the project and running:
-```
-bin/rails server
-```
+## Starting The Server
 
-Here's the command to create a DB, if you need it. Rails does a lot of magic,
-so it will generate files that it needs.
-```
-rake db:create
-```
+Our basic template requires no database or models, so we'll skip all that jazz here.
 
-To generate tables for your db:
-```
-rails generate scaffold Test user:string user_id:integer
-```
-This will create a model and a migration file that will create a db table that
-corresponds to it, a controller, and a few views.
+7. Start the development server `bin/rails server`
+8. Visit [http://localhost:3000](http://localhost:3000) in your browser and test!
+9. Test your xml and test adding your LTI. Rails does a lot of black magic!
 
-Go ahead and migrate to create them:
-```
-rake db:migrate
-```
 
-Test your xml and test adding your LTI. Rails does a lot of black magic!
+## Install LTI into an LMS, Etc.
 
-# Install LTI
-- Have the XML, consumer key, and secret ready.
-    - You can use the [XML Config Builder](https://www.edu-apps.org/build_xml.html) to build XML.
+- You'll need the LTI XML config url, matching consumer key, and secret from your `lti_settings.yml` file ready.
 - Navigate to the course that you would like the LTI to be added to. Click Settings in the course navigation bar. Then, select the Apps tab. Near the tabs on the right side, click 'View App Configurations'. It should lead to a page that lists what LTIs are inside the course. Click the button near the tabs that reads '+ App'.
 - A modal should come up that allows you to customize how the app gets added. Change the configuration in the Configuration Type dropdown menu to 'By URL' or 'Paste XML' depending on how you have your LTI configured. If your LTI is publicly accessible, 'By URL' is recommended. From there, fill out the Name and Consumer Keys, and the Config URL or XML Configuration. Click Submit.
 - Your LTI will appear depending on specifications in the XML. Currently, they get specified in the **options** tag within the **extensions** tag. Extensions can include these options:
