@@ -6,7 +6,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 *.DS_STORE
-secrets.yml
+
 # Ignore bundler config.
 /.bundle
 
@@ -23,7 +23,7 @@ secrets.yml
 # Ignore Byebug command history file.
 .byebug_history
 
-config/lti_settings.yml
-config/secrets.yml
+lti_settings.yml
+secrets.yml
 
 db/*.sqlite3
