@@ -1,0 +1,22 @@
+<h1>LTI Ruby on Rails Template</h1>
+
+<h2>Configuration XML</h2>
+
+<p>View the LTI configuration xml <a href="<%= lti_config_path %>" data-turbolinks="false">here</a></p>
+
+<p>This configuration is used to install your LTI tool into an LSM.  This xml can be referenced by url or copied and pasted durring the install process.</p>
+
+
+<h2>LTI Launch</h2>
+
+<p>View the LTI Launch endpoint <a href="<%= lti_launch_path %>" data-turbolinks="false">here</a></p>
+
+<p>Note, this url is typically sent a POST request with all sorts of LTI data.  If you access it directly, it'll display an error page indicating your request did not validate.</p>
+
+<h3>Testing LTI Launch</h3>
+<ol>
+	<li>Visit the <a href="http://ltiapps.net/test/tc.php">IMS LTI Tool Consumer Emulator</a></li>
+	<li>Set <b>Launch URL</b> to <span>"<%= lti_launch_url %>"</span></li>
+	<li>Set <b>Consmer key</b> to the value defined in <span>"config/lti_settings.yml"</span></li>
+	<li>Set <b>Shared secret</b> to the value defined in <span>"config/lti_settings.yml"</span></li>
+</ol>

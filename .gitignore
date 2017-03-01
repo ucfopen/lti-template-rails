@@ -23,5 +23,7 @@ secrets.yml
 # Ignore Byebug command history file.
 .byebug_history
 
-lti_settings.yml
+config/lti_settings.yml
+config/secrets.yml
 
+db/*.sqlite3
