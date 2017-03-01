@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   # CSRF stuff ^
 
-  # LTI Launch endpoint
+  # LTI Launch endpoint (responds to POST and GET - see routes.rb)
   # checks for required query params
   # checks that the oauth signature checks out
   # read more about IMS::LTI in ims-lti gem https://github.com/instructure/ims-lti
-  # note the oauth nonce is not handled within ims-lti gem
+  # note the oauth nonce is not handled within ims-lti gem, it's up to you
   def launch
     provider = IMS::LTI::ToolProvider.new(
       Rails.application.config.lti_settings['consumer_key'],

@@ -11,12 +11,12 @@
     <blti:title>LTI Name</blti:title>
     <blti:description>LTI Description</blti:description>
     <blti:icon></blti:icon>
-    <blti:launch_url><%= Rails.application.config.lti_settings['launch_url'] %></blti:launch_url>
+    <blti:launch_url><%= lti_launch_url  %></blti:launch_url>
     <blti:extensions platform="canvas.instructure.com">
       <lticm:property name="tool_id">ID</lticm:property>
       <lticm:property name="privacy_level">public</lticm:property>
       <lticm:options name="course_navigation">
-        <lticm:property name="url"><%= Rails.application.config.lti_settings['launch_url'] %></lticm:property>
+        <lticm:property name="url"><%= lti_launch_url %></lticm:property>
         <lticm:property name="text">LTI Name (Shows up on course nav)</lticm:property>
         <lticm:property name="visibility">admins</lticm:property>
         <lticm:property name="default">enabled</lticm:property>
