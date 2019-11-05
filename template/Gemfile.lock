@@ -55,7 +55,8 @@ GEM
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    i18n (0.7.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     ims-lti (1.1.13)
       builder
       oauth (>= 0.4.5, < 0.6)
