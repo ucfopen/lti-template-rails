@@ -2,6 +2,10 @@
 
 # LTI Template For Ruby on Rails
 
+## ⚠️ Support Warning ⚠️
+
+This template is currently unsupported by UCF. We are looking for maintainers. Please [contact us](#contact-us) if you're interested in taking over this project; we'll gladly link out to your fork.
+
 ## Setup
 
 1. Make sure [Ruby is installed](https://www.ruby-lang.org/en/documentation/installation/) `ruby --version`
@@ -33,3 +37,7 @@ Our basic template requires no database or models, so we'll skip all that jazz h
     - User Navigation (user profile)
 
 **Note**: If you're using Canvas, your version might be finicky about SSL certificates. Keep HTTP/HTTPS in mind when creating your XML and while developing your project. Some browsers will disable non-SSL LTI content until you enable it through clicking a shield in the browser bar or something similar.
+
+## Contact Us
+
+Join us on the [UCF Open Slack](https://ucf-open-slackin.herokuapp.com/) and use the `#lti` channel.
