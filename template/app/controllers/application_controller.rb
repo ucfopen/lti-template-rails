@@ -14,13 +14,13 @@ class ApplicationController < ActionController::Base
   # read more about IMS::LTI in ims-lti gem https://github.com/instructure/ims-lti
   # note the oauth nonce is not handled within ims-lti gem, it's up to you
   def launch
-    provider = IMS::LTI::ToolProvider.new(
-      Rails.application.config.lti_settings['consumer_key'],
-      Rails.application.config.lti_settings['consumer_secret'],
-      request.query_parameters
+    authenticator = IMS::LTI::Services::MessageAuthenticator.new(
+      request.url,
+      request.request_parameters,
+      Rails.application.config.lti_settings['consumer_secret']
     )
 
-    if not provider.valid_request?(request)
+    if not authenticator.valid_signature?
       # the request wasnt validated :(
       render :launch_error, status: 401
       return
